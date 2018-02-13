@@ -3,13 +3,19 @@ WD Passport Ultra Complete Utilities for Linux.
 
 <h1> Intro </h1>
 
-This script let you unlock, change password and erase Western Digital Passport devices on Linux platform. 
+This is a python2 script which let you unlock, change password and erase encrypted Western Digital Passport devices on Linux platform.
 
 <h1> Install </h1>
 
-In order to run this script you need to install "lsscsi" command and "py_sg" library. 
+In order to run this script you need to install "lsscsi" command and the "py_sg" module for <b>python2</b>. 
 
-For example on Ubuntu you can install the missing dependancies with
+For example, on Arch linux:
+```
+ yaourt -S python2-pip lsscsi
+ sudo pip2 install py_sg
+```
+
+On Ubuntu:
 ```
 sudo apt-get install python-pip python-dev lsscsi
 sudo pip install py_sg
