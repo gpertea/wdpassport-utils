@@ -23,7 +23,9 @@ sudo pip install py_sg
 
 
 <h1> Usage </h1>
+
 After cloning the repository, make sure the `wdpassport-utils.py` script is executable:
+
 ```
 cd wdpassport-utils
 chmod a+rx wdpassport-utils.py
@@ -38,7 +40,7 @@ Note: script invocations below should be run as root. (e.g. issue `sudo su` to g
 ```
 ./wdpassport-utils.py -m
 ```
-* if you O.S. does not mount new drives automatically, check which /dev/sd?1 drive was made available by the `-m` option
+* if your O.S. does not mount new drives automatically, check which /dev/sd?1 drive was made available by the `-m` option
 (e.g. by running `dmesg | tail` after the previous commant) and mount it manually, with something like this:
 ```
 mkdir /mnt/unlocked
@@ -47,6 +49,7 @@ mount /dev/sde1 /mnt/unlocked
 (assuming that the unlocked drive is /dev/sde1)
 
 <h2>Script options</h2>
+
 ```
 -h, --help            show this help message and exit
 ```
@@ -87,7 +90,5 @@ The script will try to auto detect the current device path of your WD Passport d
 If something is wrong or you want to manually specify the device path yourself you can use this option.
 
 <h1>Disclaimer</h1>
-I based my research on Dan Lukes (FreeBSD version) and KenMacD (very simple unlocker) works. 
-I'm in no way sponsored by or connected with Western Digital.
-Use any of the information contained in this repository at your own risk. I accept no
-responsibility.
+This is based on the work of Mateusz Bartocha (https://github.com/evox95), Dan Lukes (FreeBSD version) and KenMacD (very simple unlocker). Use any of the information contained in this repository at your own risk.
+
