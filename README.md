@@ -1,5 +1,5 @@
 # wdpassport-utils
-Western Digital utilities for unlocking and allow mounting of hardware encrypted Passport drives under Linux.
+Western Digital utilities for unlocking and mounting hardware encrypted Passport drives under Linux.
 
 <h1> Intro </h1>
 
