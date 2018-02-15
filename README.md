@@ -40,13 +40,13 @@ Note: script invocations below should be run as root. (e.g. issue `sudo su` to g
 ```
 ./wdpassport-utils.py -m
 ```
-* if your O.S. does not mount new drives automatically, check which /dev/sd?1 drive was made available by the `-m` option
-(e.g. by running `dmesg | tail` after the previous commant) and mount it manually, with something like this:
+Note that this does not actually mount the unlocked partition, but it just makes that partition visible as a block device, as a removable drive (usually `/dev/sd?1`).
+If your Linux OS does not mount the removable drive automatically, check which /dev/sdX drive was made available by the `-m` option (e.g. by running `dmesg | tail` after the previous command) and mount the corresponding partition manually, with something like this:
 ```
 mkdir /mnt/unlocked
 mount /dev/sde1 /mnt/unlocked
 ```
-(assuming that the unlocked drive is /dev/sde1)
+(assuming that the unlocked drive is /dev/sde after the `-m` command)
 
 <h2>Script options</h2>
 
@@ -68,7 +68,7 @@ followed by another run of the script with the `-m` command in order to make the
 ```
 -m, --mount           Enable mount point for an unlocked device
 ```
-After unlocking, your operating system still thinks that your device is a strange thing attached to the usb port and it won't know how to manage it. You need this option to force the O.S. to rescan the device and handle it as a normal external usb harddrive (a new /dev/sd?1/ device should appear after this command is issued).
+After unlocking, your operating system still thinks that your device is a strange thing attached to the usb port and it won't know how to manage it. You need this `-m` option to force the O.S. to rescan the device and handle it as a normal external usb harddrive (a new /dev/sdX device should appear after this command is issued).
 
 ```
 -c, --change_passwd   Change (or disable) password
