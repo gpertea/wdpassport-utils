@@ -15,6 +15,12 @@ For example, on Arch linux:
  sudo pip2 install py_sg
 ```
 
+On Fedora:
+```
+ sudo dnf install python2-pip python2-devel lsscsi
+ sudo pip2 install py_sg
+```
+
 On Ubuntu:
 ```
 sudo apt-get install python-pip python-dev lsscsi
